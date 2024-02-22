@@ -1,8 +1,10 @@
 <template>
-    <div class=" flex justify-around my-9" >
-        <div>
+    <div class=" grid grid-cols-4 gap-4 ml-52 mr-52 mt-10" >
+        <nuxt-link to="/iphone/iphone-12" class="shadow-lg text-center">
             <h1>Iphone 12</h1>
-            <img  width="300" src="/images/iphone12.jpg" alt="">
+            <div class="flex justify-center">
+            <img  width="300" src="/images/iphone-12.jpg" alt="">
+            </div>
             <p>
                 Brand	Apple <br>
                 Model Name	iPhone 12<br>
@@ -10,12 +12,14 @@
                 Operating System	iOS 14<br>
                 Cellular Technology	5G
             </p>
+        </nuxt-link> 
+
+
+        <nuxt-link to="/iphone/iphone-13" class="shadow-lg text-center">
+         <h1>Iphone 13</h1>
+             <div class="flex justify-center">
+            <img  width="300" src="/images/iphone-13.jpg" alt="">
         </div>
-
-
-        <div >
-            <h1>Iphone 13</h1>
-            <img  width="300" src="/images/iphone13.jpg" alt="">
             <p>
                 Brand	Apple <br>
                 Model Name	iPhone 13<br>
@@ -23,11 +27,14 @@
                 Operating System	iOS 14<br>
                 Cellular Technology	5G
             </p>
-        </div>
+        </nuxt-link>
+    
 
-        <div>
+        <nuxt-link to="/iphone/iphone-14" class="shadow-lg text-center">
             <h1>Iphone 14</h1>
-            <img  width="300" src="/images/iphone14.jpg" alt="">
+            <div class="flex justify-center">
+            <img  width="300" src="/images/iphone-14.jpg" alt="">
+        </div>
             <p>
                 Brand	Apple <br>
                 Model Name	iPhone 14<br>
@@ -35,11 +42,13 @@
                 Operating System	iOS 15<br>
                 Cellular Technology	5G
             </p>
-        </div>
+        </nuxt-link>
 
-        <div>
+        <nuxt-link to="/iphone/iphone-14-pro" class="shadow-lg text-center">
             <h1>Iphone 14 pro</h1>
-            <img  width="300" src="/images/iphone14pro.jpg" alt="">
+        <div class="flex justify-center"> 
+            <img  width="300" src="/images/iphone-14-pro.jpg" alt="">
+        </div>
             <p>
                 Brand	Apple <br>
                 Model Name	iPhone 14 pro<br>
@@ -47,9 +56,21 @@
                 Operating System	iOS 15<br>
                 Cellular Technology	5G
             </p>
-        </div>
+        </nuxt-link>
     </div>
 </template>
+
+<script setup>
+
+// definePageMeta({
+//     middleware: ['auth'],
+// })
+
+const {data } = useFetch("/api/iphones");
+console.log(data.value);
+
+
+</script>
 <style>
 
 
